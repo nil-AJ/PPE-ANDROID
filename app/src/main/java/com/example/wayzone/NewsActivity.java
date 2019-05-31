@@ -53,7 +53,11 @@ public class NewsActivity extends AppCompatActivity {
 
                     try {
                         String url = api.urlCreator(json.getString("email"),json.getString("password") ,1,arr,api.HASHING_FALSE);
+                        http.getJsonResponse(url);
                         Log.d("*****************",url);
+                        edit_news.setText("");
+                        edit_title.setText("");
+                        Toast.makeText(NewsActivity.this,"Nouvelle news crée",Toast.LENGTH_SHORT).show();
 
                     } catch (JSONException e) {
                         e.printStackTrace();

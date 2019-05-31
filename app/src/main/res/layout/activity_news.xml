@@ -16,7 +16,7 @@
         android:ems="10"
         android:gravity="start|top"
         android:hint="Zone de texte pour la news"
-        android:inputType="textLongMessage"
+        android:inputType="textImeMultiLine"
         app:layout_constraintBottom_toTopOf="@+id/btn_publish_news"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
