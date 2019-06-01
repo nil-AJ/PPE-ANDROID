@@ -69,7 +69,7 @@ public class HttpRequest {
                     return json;
                 }else {
                     Log.d("HttpRequest/geJsonRep ","Aucune reponse du serveur");
-                    json.put("","");
+                    json.put("Response","500");
                     return json;
                 }
             }
@@ -77,7 +77,7 @@ public class HttpRequest {
         {
             Log.d("HttpRequest/getJson:",io.toString());
             try {
-                json.put("","");
+                json.put("Response","500");
             } catch (JSONException e) {
                 e.printStackTrace();
             }

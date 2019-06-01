@@ -9,6 +9,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -70,8 +71,9 @@ public class MainActivity extends AppCompatActivity {
 
                         //On envoit la requete et recupere la reponse
                         JSONObject jsonRep = http.getJsonResponse(url);
+                        Log.d("****************",jsonRep.toString());
 
-                        if (jsonRep.getString("") != "")
+                        if (jsonRep.getString("Response") != "500")
                         {
 
 
@@ -88,6 +90,7 @@ public class MainActivity extends AppCompatActivity {
                                 error.setTextColor(Color.RED);
                                 error.setText("Vous n'etes pas autoriser à vous connnecter");
                                 login.setVisibility(View.VISIBLE);
+                                Toast.makeText(MainActivity.this,"Penser a verifier votre connexion internet",Toast.LENGTH_SHORT);
                             }
                     }else {
                             //Ici on permet a l'utilisateur de rentrer un nouvelle url pour la base de donnée si celle ci n'est pas correct
