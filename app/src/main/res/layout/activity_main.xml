@@ -10,40 +10,33 @@
         android:id="@+id/input_password"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="21dp"
+        android:layout_marginTop="31dp"
         android:ems="10"
         android:hint="mot de passe ..."
         android:inputType="textPassword"
-        app:layout_constraintBottom_toTopOf="@+id/btn_login"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/btn_edit_url"
         app:layout_constraintTop_toBottomOf="@+id/input_email" />
 
     <EditText
         android:id="@+id/input_email"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="41dp"
+        android:layout_marginTop="81dp"
+        android:layout_marginEnd="9dp"
         android:ems="10"
         android:hint="email ..."
         android:inputType="textWebEmailAddress|textPersonName"
-        app:layout_constraintBottom_toTopOf="@+id/input_password"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/error_message" />
+        app:layout_constraintEnd_toEndOf="@+id/input_password"
+        app:layout_constraintTop_toBottomOf="@+id/img_logo" />
 
     <ImageView
         android:id="@+id/img_logo"
         android:layout_width="122dp"
         android:layout_height="122dp"
         android:layout_marginTop="117dp"
-        android:layout_marginBottom="27dp"
-        app:layout_constraintBottom_toTopOf="@id/error_message"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="1.0"
         app:srcCompat="@mipmap/ic_launcher_round" />
 
     <Button
@@ -51,19 +44,19 @@
         style="@style/Widget.AppCompat.Button.Borderless"
         android:layout_width="@android:dimen/app_icon_size"
         android:layout_height="@android:dimen/app_icon_size"
-        android:layout_marginBottom="223dp"
+        android:layout_marginTop="30dp"
         android:background="@drawable/ic_settings_power_black_24dp"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/input_password" />
+        app:layout_constraintTop_toBottomOf="@+id/edit_url" />
 
     <TextView
         android:id="@+id/error_message"
         android:layout_width="337dp"
-        android:layout_height="26dp"
+        android:layout_height="24dp"
         android:layout_marginStart="16dp"
-        android:layout_marginBottom="22dp"
+        android:layout_marginTop="26dp"
+        android:layout_marginBottom="31dp"
         android:foregroundGravity="center_vertical|center_horizontal"
         android:gravity="center|center_vertical"
         android:textColor="#F44336"
@@ -71,4 +64,28 @@
         app:layout_constraintBottom_toTopOf="@+id/input_email"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/img_logo" />
+
+    <EditText
+        android:id="@+id/edit_url"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="26dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="URL de la base de donné"
+        android:visibility="invisible"
+        app:layout_constraintEnd_toStartOf="@+id/btn_edit_url"
+        app:layout_constraintTop_toBottomOf="@+id/input_password"
+        tools:visibility="invisible" />
+
+    <Button
+        android:id="@+id/btn_edit_url"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="11dp"
+        android:text="Changer"
+        android:visibility="invisible"
+        app:layout_constraintBaseline_toBaselineOf="@+id/edit_url"
+        app:layout_constraintEnd_toEndOf="parent"
+        tools:visibility="invisible" />
 </android.support.constraint.ConstraintLayout>

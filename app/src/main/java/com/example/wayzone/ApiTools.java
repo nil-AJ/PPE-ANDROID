@@ -76,4 +76,12 @@ public class ApiTools {
     public void setUser_info(JSONObject user_info) {
         this.USER_INFO = user_info;
     }
+
+    public static void setURL(String URL) {
+        ApiTools.URL = URL;
+    }
+
+    public static String getURL() {
+        return URL;
+    }
 }

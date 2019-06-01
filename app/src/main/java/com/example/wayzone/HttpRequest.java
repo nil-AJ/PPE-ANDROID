@@ -33,7 +33,13 @@ public class HttpRequest {
                     .build();
 
             try (Response response = client.newCall(request).execute()) {
-                return response.body().string();
+                if(response.isSuccessful()) {
+                    return response.body().string();
+                }else {
+                    Log.d("HttpRequest/getContent ","Aucune reponse du serveur");
+                    return "";
+
+                }
             }
         }catch (IOException io)
         {
@@ -57,13 +63,24 @@ public class HttpRequest {
                     .build();
 
             try (Response response = client.newCall(request).execute()) {
-                String rep = response.body().string();
-                json = new JSONObject(rep);
-                return json;
+                if(response.isSuccessful()) {
+                    String rep = response.body().string();
+                    json = new JSONObject(rep);
+                    return json;
+                }else {
+                    Log.d("HttpRequest/geJsonRep ","Aucune reponse du serveur");
+                    json.put("","");
+                    return json;
+                }
             }
         }catch (IOException | JSONException io)
         {
             Log.d("HttpRequest/getJson:",io.toString());
+            try {
+                json.put("","");
+            } catch (JSONException e) {
+                e.printStackTrace();
+            }
             return json;
         }
     }
