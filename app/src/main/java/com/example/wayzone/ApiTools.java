@@ -28,7 +28,7 @@ public class ApiTools {
     public static JSONObject USER_INFO;
 
     //url de la requete
-    private static String URL = "http://192.168.0.23/PPE-WEB/";
+    private static String URL = "https://serveur-web.nil-ct.fr/PPE-WEB/";
 
 
 

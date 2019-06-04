@@ -36,7 +36,6 @@ public class UserActivity extends AppCompatActivity {
         nom = findViewById(R.id.text_name);
         password = findViewById(R.id.text_password);
         phone_number = findViewById(R.id.text_pnumber);
-        classe = findViewById(R.id.text_class);
         date = findViewById(R.id.text_date);
         change_info = findViewById(R.id.btn_change);
 
@@ -45,12 +44,10 @@ public class UserActivity extends AppCompatActivity {
             final String old_nom = json.getString("name");
             final String old_pNumber= json.getString("phoneNumber");
             final String old_password = json.getString("password");
-            String old_classe = json.getString("class");
             String Odate = json.getString("creationDate");
             final String email = json.getString("email");
 
             nom.setText(old_nom);
-            classe.setText("Vous etes dans la classe n° "+old_classe);
             phone_number.setText(old_pNumber);
             date.setText("Compte créer le "+Odate);
 

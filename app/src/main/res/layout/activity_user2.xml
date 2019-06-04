@@ -11,8 +11,6 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="53dp"
-        android:layout_marginBottom="115dp"
-        app:layout_constraintBottom_toTopOf="@+id/text_class"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
@@ -22,24 +20,24 @@
         android:id="@+id/text_name"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="16dp"
+        android:layout_marginTop="307dp"
+        android:layout_marginBottom="308dp"
         android:ems="10"
         android:inputType="textPersonName"
         android:text="Nom"
-        app:layout_constraintBottom_toTopOf="@+id/text_password"
+        app:layout_constraintBottom_toTopOf="@+id/text_date"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/text_class" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
         android:id="@+id/text_password"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="14dp"
+        android:layout_marginTop="16dp"
         android:ems="10"
         android:hint="Changer de mot de passe..."
         android:inputType="text"
-        app:layout_constraintBottom_toTopOf="@+id/text_pnumber"
         app:layout_constraintStart_toStartOf="@+id/text_name"
         app:layout_constraintTop_toBottomOf="@+id/text_name" />
 
@@ -47,26 +45,12 @@
         android:id="@+id/text_pnumber"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="51dp"
+        android:layout_marginTop="14dp"
         android:ems="10"
         android:inputType="phone"
         android:text="Numero de telephone"
-        app:layout_constraintBottom_toTopOf="@+id/btn_change"
         app:layout_constraintStart_toStartOf="@+id/text_password"
         app:layout_constraintTop_toBottomOf="@+id/text_password" />
-
-    <TextView
-        android:id="@+id/text_class"
-        android:layout_width="238dp"
-        android:layout_height="24dp"
-        android:layout_marginEnd="64dp"
-        android:layout_marginBottom="43dp"
-        android:ems="10"
-        android:inputType="textPersonName"
-        android:text="Dans la classe "
-        app:layout_constraintBottom_toTopOf="@+id/text_name"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/avatar" />
 
     <TextView
         android:id="@+id/text_date"
@@ -76,16 +60,14 @@
         android:text="Compte creer le 000303003030"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btn_change" />
+        app:layout_constraintStart_toStartOf="parent" />
 
     <Button
         android:id="@+id/btn_change"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="89dp"
+        android:layout_marginTop="51dp"
         android:text="Changer les informations"
-        app:layout_constraintBottom_toTopOf="@+id/text_date"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/text_pnumber" />
