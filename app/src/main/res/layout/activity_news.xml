@@ -8,19 +8,20 @@
 
     <EditText
         android:id="@+id/edit_news"
+        style="@style/Widget.AppCompat.AutoCompleteTextView"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:layout_marginStart="58dp"
         android:layout_marginEnd="58dp"
-        android:layout_marginBottom="66dp"
+        android:layout_marginBottom="272dp"
         android:ems="10"
         android:gravity="start|top"
         android:hint="Zone de texte pour la news"
         android:inputType="textImeMultiLine"
-        app:layout_constraintBottom_toTopOf="@+id/btn_publish_news"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/edit_title_news" />
+        app:layout_constraintTop_toBottomOf="@+id/textView2" />
 
     <EditText
         android:id="@+id/edit_title_news"
@@ -31,6 +32,7 @@
         android:ems="10"
         android:hint="Titre de la news"
         android:inputType="textPersonName"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
         app:layout_constraintBottom_toTopOf="@+id/edit_news"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -46,4 +48,22 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/edit_news" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="220dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="108dp"
+        android:layout_marginBottom="128dp"
+        android:fontFamily="monospace"
+        android:text="PUBLICATION DE NEWS"
+        android:textAlignment="center"
+        android:textAllCaps="false"
+        android:textColor="#3F51B5"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/edit_news"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 </android.support.constraint.ConstraintLayout>

@@ -10,44 +10,49 @@
         android:id="@+id/input_password"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="31dp"
+        android:layout_marginTop="16dp"
         android:ems="10"
         android:hint="mot de passe ..."
         android:inputType="textPassword"
-        app:layout_constraintEnd_toStartOf="@+id/btn_edit_url"
+        app:layout_constraintStart_toStartOf="@+id/input_email"
         app:layout_constraintTop_toBottomOf="@+id/input_email" />
 
     <EditText
         android:id="@+id/input_email"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="81dp"
-        android:layout_marginEnd="9dp"
+        android:layout_marginEnd="41dp"
         android:ems="10"
         android:hint="email ..."
         android:inputType="textWebEmailAddress|textPersonName"
-        app:layout_constraintEnd_toEndOf="@+id/input_password"
-        app:layout_constraintTop_toBottomOf="@+id/img_logo" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/error_message"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
         android:id="@+id/img_logo"
-        android:layout_width="122dp"
-        android:layout_height="122dp"
-        android:layout_marginTop="117dp"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="44dp"
+        android:layout_marginBottom="58dp"
+        android:adjustViewBounds="false"
+        android:cropToPadding="false"
+        android:scaleType="centerInside"
+        app:layout_constraintBottom_toBottomOf="@+id/textView"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@mipmap/ic_launcher_round" />
+        app:srcCompat="@drawable/wayzone" />
 
     <Button
         android:id="@+id/btn_login"
         style="@style/Widget.AppCompat.Button.Borderless"
         android:layout_width="@android:dimen/app_icon_size"
         android:layout_height="@android:dimen/app_icon_size"
-        android:layout_marginTop="30dp"
+        android:layout_marginTop="29dp"
+        android:layout_marginEnd="34dp"
         android:background="@drawable/ic_settings_power_black_24dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/btn_edit_url"
         app:layout_constraintTop_toBottomOf="@+id/edit_url" />
 
     <TextView
@@ -55,26 +60,27 @@
         android:layout_width="337dp"
         android:layout_height="24dp"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="26dp"
-        android:layout_marginBottom="31dp"
+        android:layout_marginTop="78dp"
+        android:layout_marginBottom="80dp"
         android:foregroundGravity="center_vertical|center_horizontal"
         android:gravity="center|center_vertical"
         android:textColor="#F44336"
         android:textSize="18sp"
-        app:layout_constraintBottom_toTopOf="@+id/input_email"
+        app:layout_constraintBottom_toTopOf="@+id/input_password"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/img_logo" />
+        app:layout_constraintTop_toTopOf="@+id/textView" />
 
     <EditText
         android:id="@+id/edit_url"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="26dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="27dp"
         android:ems="10"
         android:inputType="textPersonName"
         android:text="URL de la base de donné"
         android:visibility="invisible"
-        app:layout_constraintEnd_toStartOf="@+id/btn_edit_url"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/input_password"
         tools:visibility="invisible" />
 
@@ -82,10 +88,24 @@
         android:id="@+id/btn_edit_url"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="11dp"
+        android:layout_marginTop="27dp"
+        android:layout_marginEnd="39dp"
         android:text="Changer"
         android:visibility="invisible"
-        app:layout_constraintBaseline_toBaselineOf="@+id/edit_url"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/input_password"
         tools:visibility="invisible" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="167dp"
+        android:layout_height="52dp"
+        android:layout_marginBottom="76dp"
+        android:text="BIENVENUE SUR L'ESPACE GESTION WAYZONE"
+        android:textAlignment="center"
+        android:textColor="#3F51B5"
+        app:layout_constraintBottom_toTopOf="@+id/input_email"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
 </android.support.constraint.ConstraintLayout>

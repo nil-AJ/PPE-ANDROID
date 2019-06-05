@@ -8,24 +8,56 @@
 
     <Button
         android:id="@+id/btn_utilisateur"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        style="@style/Widget.AppCompat.Button"
+        android:layout_width="wrap_content"
+        android:layout_height="58dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="31dp"
+        android:layout_marginTop="413dp"
         android:text="Gestion Uilisateur" />
 
     <Button
         android:id="@+id/btn_news"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/btn_utilisateur"
         android:layout_alignParentStart="true"
+        android:layout_marginStart="258dp"
+        android:layout_marginTop="-53dp"
         android:text="Nouvelle News" />
 
     <Button
         android:id="@+id/btn_deconnexion"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
-        android:layout_marginTop="104dp"
+        android:layout_marginStart="266dp"
+        android:layout_marginTop="658dp"
         android:text="Deconnexion" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="222dp"
+        android:layout_height="49dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="103dp"
+        android:layout_marginEnd="96dp"
+        android:text="ADMINISTRATION"
+        android:textAlignment="center"
+        android:textColor="#3F51B5"
+        android:textSize="24sp"
+        android:textStyle="bold" />
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="255dp"
+        android:layout_height="295dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="75dp"
+        android:layout_marginTop="109dp"
+        app:srcCompat="@drawable/wayzone" />
 </RelativeLayout>
