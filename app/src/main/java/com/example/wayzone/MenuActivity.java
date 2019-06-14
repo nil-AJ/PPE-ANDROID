@@ -16,6 +16,7 @@ public class MenuActivity extends AppCompatActivity {
     Button deconnexion;
     Button news;
     Button user_session;
+    Button changepass;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -25,6 +26,7 @@ public class MenuActivity extends AppCompatActivity {
         deconnexion = findViewById(R.id.btn_deconnexion);
         news = findViewById(R.id.btn_news);
         user_session = findViewById(R.id.btn_utilisateur);
+        changepass = findViewById(R.id.btn_menu_change_pass);
 
         deconnexion.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -47,6 +49,14 @@ public class MenuActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(MenuActivity.this,UserActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        changepass.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MenuActivity.this,ChangePasswordActivity.class);
                 startActivity(intent);
             }
         });

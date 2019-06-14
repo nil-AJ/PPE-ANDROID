@@ -60,4 +60,14 @@
         android:layout_marginStart="75dp"
         android:layout_marginTop="109dp"
         app:srcCompat="@drawable/wayzone" />
+
+    <Button
+        android:id="@+id/btn_menu_change_pass"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="127dp"
+        android:layout_marginBottom="176dp"
+        android:text="Changer le mot de passe" />
 </RelativeLayout>
