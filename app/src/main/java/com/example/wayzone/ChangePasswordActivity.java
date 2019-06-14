@@ -41,9 +41,9 @@ public class ChangePasswordActivity extends AppCompatActivity {
                     try {
                         if(api.USER_INFO.getString("password") == Opass)
                         {
-                            String[] arr = {"membre","name","nom","email","email"};
+                            String[] arr = {"membre","password",Npass,"email",api.USER_INFO.getString("email")};
                             ArrayList<String> par = new ArrayList<>(Arrays.asList(arr));
-                            String url = api.urlCreator(api.USER_INFO.getString("email"),Opass,api.INSERT_DATA,par,false);
+                            String url = api.urlCreator(api.USER_INFO.getString("email"),Opass,api.UPDATE_DATA,par,false);
                         }
                     } catch (JSONException e) {
                         e.printStackTrace();
